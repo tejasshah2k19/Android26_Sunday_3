@@ -9,6 +9,16 @@
     android:background="#BECCC9"
     >
 
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imgSignupLogo"
+        android:src="@drawable/university"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        />
+
      <TextView
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
@@ -16,8 +26,9 @@
          android:text="Signup"
          android:textSize="15pt"
          android:layout_centerHorizontal="true"
-         android:layout_marginTop="100dp"
+         android:layout_marginTop="50dp"
          android:textColor="#0B0B0B"
+         android:layout_below="@id/imgSignupLogo"
          />
 
      <EditText
@@ -27,6 +38,8 @@
          android:layout_below="@id/tvSignupTitle"
          android:hint="Firstname"
          android:layout_marginTop="100dp"
+         android:layout_marginStart="30dp"
+         android:layout_marginEnd="30dp"
          />
 
         <EditText
@@ -36,6 +49,9 @@
             android:layout_below="@id/edtSignupFirstName"
             android:hint="Email"
             android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+
             />
 
         <EditText
@@ -46,6 +62,9 @@
             android:layout_marginTop="20dp"
             android:hint="password"
             android:inputType="textPassword"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+
             />
 
         <Button
