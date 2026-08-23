@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android26_Sunday_3">
         <activity
+            android:name=".CalcActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".InputNameActivity"
             android:exported="true">
             <intent-filter>
