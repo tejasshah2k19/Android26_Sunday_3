@@ -3,6 +3,7 @@ package com.royal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -15,6 +16,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     TextView tvNewUser;
+    EditText edtEmail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,12 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         tvNewUser = findViewById(R.id.tvLoginNewUser);
+        edtEmail = findViewById(R.id.edtLoginEmail);
+
+        Intent intent = getIntent();
+        String email = intent.getStringExtra("email");
+        edtEmail.setText(email);
+
 
         tvNewUser.setOnClickListener(new View.OnClickListener() {
             @Override

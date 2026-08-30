@@ -80,6 +80,7 @@ public class SignupActivity extends AppCompatActivity {
                 }
 
                 if(gender.isBlank()){
+                    isError=true;
                     rbMale.setError("");
                     rbFemale.setError("");
                 }
@@ -96,6 +97,9 @@ public class SignupActivity extends AppCompatActivity {
 
                     //redirect to login
                     Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+
+                    intent.putExtra("email",email);//data set
+
                     startActivity(intent);
                 }
             }
