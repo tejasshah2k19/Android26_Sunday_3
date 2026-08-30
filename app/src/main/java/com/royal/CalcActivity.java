@@ -48,15 +48,28 @@ public class CalcActivity extends AppCompatActivity {
             //read n1 n2
             String strN1 = edtN1.getText().toString();
             String strN2 = edtN2.getText().toString();
+            boolean isError = false ;
 
-            //parseInt
-            int n1 = Integer.parseInt(strN1);
-            int n2 = Integer.parseInt(strN2);
+            if(strN1.isBlank()){
+                isError = true;
+                edtN1.setError("Please enter num1");
+            }
+            if(strN2.isBlank()){
+                isError = true;
+                edtN2.setError("Please enter num2");
+            }
 
-            int ans = n1+n2;
 
-            tvResult.setText("Addition => "+ans);
+            if(!isError) {
 
+                //parseInt
+                int n1 = Integer.parseInt(strN1);
+                int n2 = Integer.parseInt(strN2);
+
+                int ans = n1 + n2;
+
+                tvResult.setText("Addition => " + ans);
+            }
         }
     });
 

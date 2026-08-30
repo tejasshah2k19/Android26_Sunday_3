@@ -69,7 +69,17 @@
         />
 
 
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvLoginNewUser"
+    android:text="New User?"
+    android:layout_below="@id/btnLoginSubmit"
+    android:layout_centerHorizontal="true"
+    android:textSize="8pt"
+    android:layout_marginTop="10dp"
+    android:textColor="#0A21BC"
+    />
 
 
 </RelativeLayout>
