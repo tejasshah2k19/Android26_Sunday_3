@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InputDataActivity"
+    android:background="#E0AC51"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="150dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtInputDataFirstname"
+            android:hint="@string/firstname"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:textColorHint="#FFFFFF"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnInputDataSubmit"
+            android:text="@string/submit"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#E64A19"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvInputDataList"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/list"
+            android:layout_marginTop="50dp"
+            android:textSize="10pt"
+            android:textColor="#1331E7"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
