@@ -37,7 +37,7 @@
          android:id="@+id/edtSignupFirstName"
          android:layout_below="@id/tvSignupTitle"
          android:hint="Firstname"
-         android:layout_marginTop="100dp"
+         android:layout_marginTop="50dp"
          android:layout_marginStart="30dp"
          android:layout_marginEnd="30dp"
          />
@@ -92,15 +92,24 @@
 
         </RadioGroup>
 
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerSignupCity"
+            android:layout_below="@id/rgSignupGender"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="20dp"
+            />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/btnSignupSubmit"
             android:text="Submit"
-            android:layout_below="@id/rgSignupGender"
+            android:layout_below="@id/spinnerSignupCity"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             />
 
     <TextView

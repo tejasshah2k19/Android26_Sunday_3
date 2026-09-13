@@ -3,9 +3,11 @@ package com.royal;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ public class SignupActivity extends AppCompatActivity {
     RadioButton rbMale,rbFemale;
     Button btnSubmit;
     TextView tvExistingUser;
+    Spinner spinnerCity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,13 @@ public class SignupActivity extends AppCompatActivity {
 
         btnSubmit = findViewById(R.id.btnSignupSubmit);
         tvExistingUser = findViewById(R.id.tvSignupExistingUser);
+
+        spinnerCity = findViewById(R.id.spinnerSignupCity);
+
+        String list[] = {"Ahmedabad","Surat","Himmatnagar","Gandhinagar"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item,list);
+        spinnerCity.setAdapter(adapter);
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
