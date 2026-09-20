@@ -15,6 +15,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class InputDataActivity extends AppCompatActivity {
 
 
@@ -53,10 +56,21 @@ public class InputDataActivity extends AppCompatActivity {
 
                 SharedPreferences sharedPreferences = getSharedPreferences("sunday3",MODE_PRIVATE);
                 SharedPreferences.Editor editor  = sharedPreferences.edit();
-                editor.putString("firstName",firstName);//key value
-                editor.apply();
+//                editor.putString("firstName",firstName);//key value
 
                 edtFirstName.setText("");
+
+                Set<String> names =  sharedPreferences.getStringSet("listOfName",null);
+                if(names == null){
+                    names = new HashSet<>();
+                    names.add(firstName);
+                }else{
+                    names.add(firstName);
+                }
+
+                editor.putStringSet("listOfName",names);
+                editor.apply();
+
 
                 Toast.makeText(getApplicationContext(),"Data Submited",Toast.LENGTH_LONG).show();
 

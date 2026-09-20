@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Set;
+
 public class ListDataActivity extends AppCompatActivity {
 
     TextView tvFirstName;
@@ -31,11 +33,21 @@ public class ListDataActivity extends AppCompatActivity {
         listViewNames = findViewById(R.id.listViewListDataNameList);
 
         SharedPreferences sharedPreferences = getSharedPreferences("sunday3",MODE_PRIVATE);
-        String firstName = sharedPreferences.getString("firstName","");
-        tvFirstName.setText(firstName);
+//        String firstName = sharedPreferences.getString("firstName","");
+//        tvFirstName.setText(firstName);
+//
+           Set<String> names =  sharedPreferences.getStringSet("listOfName",null);
 
-        String names[] = {"Bhavya","Sujal","Arik","Vidhit"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,names);
+           String namesArr [] = new String[names.size()];
+           int i=0;
+           for(String x:names){
+               namesArr[i++] = x;
+           }
+
+//        String names[] = {"Bhavya","Sujal","Arik","Vidhit"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,namesArr);
+
 
         listViewNames.setAdapter(adapter);
 

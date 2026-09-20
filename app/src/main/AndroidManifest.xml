@@ -12,34 +12,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Android26_Sunday_3">
         <activity
-            android:name=".ListDataActivity"
+            android:name=".whatsapp.UserActivity"
             android:exported="false" />
         <activity
-            android:name=".InputDataActivity"
+            android:name=".whatsapp.MailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".whatsapp.CallActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>        </activity>
-
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ListDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InputDataActivity"
+            android:exported="true" />
         <activity
             android:name=".CalcActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".InputNameActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".LoginActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".SignupActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".FirstActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
