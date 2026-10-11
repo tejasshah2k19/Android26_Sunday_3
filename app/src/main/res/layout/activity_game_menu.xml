@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".diamondgame.GameMenuActivity"
+    android:background="#FFA000"
+    >
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_centerInParent="true"
+    >
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+         android:text="@string/start_game"
+        android:backgroundTint="#0F6112"
+        android:id="@+id/btnGameMenuStartGame"
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboard"
+        android:id="@+id/btnGameMenuLeaderboard"
+
+        />
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:backgroundTint="#D32F2F"
+        android:id="@+id/btnGameMenuLogout"
+
+        />
+
+
+</LinearLayout>
+
+
+</RelativeLayout>
